@@ -1,0 +1,200 @@
+@media (min-width: 601px) {
+  .desktop-hide {
+    display: none !important; } }
+
+@media (max-width: 600px) {
+  .mobile-hide {
+    display: none !important; } }
+
+* {
+  box-sizing: border-box; }
+
+.corner-a {
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+
+.corner-b {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  max-width: 800px;
+  border: 1px solid seagreen;
+  position: relative; }
+
+.corner-a,
+.corner-b {
+  align-self: flex-end; }
+
+.main {
+  display: flex;
+  flex-flow: row;
+  min-width: 475px;
+  max-width: 600px;
+  border: 1px solid orangered; }
+
+.timer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid black; }
+  @media (max-width: 600px) {
+    .timer-wrap {
+      flex-flow: column; } }
+  @media (min-width: 601px) {
+    .timer-wrap {
+      flex-flow: row; } }
+
+.clock {
+  width: 70px;
+  border: 1px solid blue;
+  text-align: center; }
+
+.status {
+  width: 70px;
+  border: 1px solid steelblue;
+  text-align: center; }
+
+.team {
+  background: chartreuse; }
+
+.score {
+  background: brown; }
+
+.scorers {
+  background: steelblue; }
+
+.cards-desktop {
+  background: goldenrod;
+  width: 55px; }
+
+.carded-players {
+  background: darkorange; }
+
+@media (max-width: 600px) {
+  .corner-a {
+    align-self: flex-start;
+    position: static; }
+
+  .corner-b {
+    align-self: flex-end;
+    position: static; } }
+.left-col,
+.right-col {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  width: 80%;
+  margin: auto; }
+  .left-col * >,
+  .right-col * > {
+    display: flex; }
+
+.top {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100px; }
+  .top > div {
+    padding: 5px; }
+
+.bottom > div {
+  height: 25px; }
+
+.team,
+.scorers {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  width: 75%; }
+
+.score {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: center;
+  align-items: center;
+  min-width: 56px;
+  font-size: 28px; }
+
+@media (max-width: 600px) {
+  .main {
+    min-width: 100%; }
+
+  .top {
+    flex-flow: column nowrap;
+    height: initial; }
+
+  .team,
+  .scorers {
+    height: initial;
+    width: 100%; }
+
+  .score {
+    align-self: flex-end;
+    flex: 1 100px; }
+
+  .scorers {
+    order: 1; } }
+.right-col .score {
+  align-self: flex-end; }
+.right-col .top {
+  flex-flow: column wrap-reverse; }
+
+.left-col .top > *:not(.score),
+.left-col .bottom > * {
+  display: flex;
+  justify-content: flex-end; }
+
+.empty {
+  height: 28px; }
+
+.colon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 83px;
+  font-size: 100px; }
+
+.corners {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  width: 100%; }
+
+.corner-left,
+.corner-right,
+.corner-a,
+.corner-b {
+  border: 1px solid crimson; }
+
+@media (max-width: 600px) {
+  .main {
+    order: 1; }
+
+  .corners {
+    order: 2; } }
+@media (min-width: 601px) {
+  .corner-a {
+    order: 1; }
+
+  .main {
+    order: 2; }
+
+  .corner-b {
+    order: 3; } }
+.show-more {
+  display: flex;
+  justify-content: center;
+  order: 4;
+  width: 100%;
+  background-color: #000;
+  padding: 10px;
+  color: #fff; }
+
+/*# sourceMappingURL=main.css.map */
