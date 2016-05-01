@@ -1,8 +1,8 @@
 $splitpoint: 600px;
 
 @mixin breakpoint($point) {
-  @if $point == desktop { @media (min-width: 601px) { @content } }
-  @if $point == mobile { @media (max-width: 600px) { @content } }
+  @if $point == desktop { @media (min-width: $splitpoint + 1) { @content } }
+  @if $point == mobile { @media (max-width: $splitpoint) { @content } }
 }
 
 .desktop-hide {
@@ -90,6 +90,7 @@ $splitpoint: 600px;
 
 .score {
   background: brown;
+  height: 100px;
 }
 
 .scorers {
@@ -152,9 +153,6 @@ $splitpoint: 600px;
   display: flex;
   flex: 1;
   align-items: flex-end;
-  > div {
-    height: 25px;
-  }
 }
 
 .team,
@@ -287,4 +285,8 @@ $black: #000;
   background-color: $black;
   padding: 10px;
   color: $white;
+}
+
+ul {
+  margin: 0;
 }
