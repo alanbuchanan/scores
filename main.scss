@@ -94,6 +94,11 @@ $splitpoint: 600px;
 
 .scorers {
   background: steelblue;
+  overflow-x: scroll;
+  margin: auto;
+  ul {
+    align-self: flex-start;
+  }
 }
 
 .cards-desktop {
@@ -103,6 +108,8 @@ $splitpoint: 600px;
 
 .carded-players {
   background: darkorange;
+  display: flex;
+  flex: 1;
 }
 
 @include breakpoint(mobile) {
@@ -125,7 +132,6 @@ $splitpoint: 600px;
   flex-direction: column;
   max-width: 300px;
   width: 80%;
-  margin: auto;
 
   * > {
     display: flex;
@@ -142,8 +148,13 @@ $splitpoint: 600px;
   }
 }
 
-.bottom > div {
-  height: 25px;
+.bottom {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  > div {
+    height: 25px;
+  }
 }
 
 .team,
@@ -192,6 +203,8 @@ $splitpoint: 600px;
 
 // Align positioning of right col
 .right-col {
+
+  align-content: flex-start;
 
   .score {
     align-self: flex-end;

@@ -69,14 +69,20 @@
   background: brown; }
 
 .scorers {
-  background: steelblue; }
+  background: steelblue;
+  overflow-x: scroll;
+  margin: auto; }
+  .scorers ul {
+    align-self: flex-start; }
 
 .cards-desktop {
   background: goldenrod;
   width: 55px; }
 
 .carded-players {
-  background: darkorange; }
+  background: darkorange;
+  display: flex;
+  flex: 1; }
 
 @media (max-width: 600px) {
   .corner-a {
@@ -91,8 +97,7 @@
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  width: 80%;
-  margin: auto; }
+  width: 80%; }
   .left-col * >,
   .right-col * > {
     display: flex; }
@@ -104,8 +109,12 @@
   .top > div {
     padding: 5px; }
 
-.bottom > div {
-  height: 25px; }
+.bottom {
+  display: flex;
+  flex: 1;
+  align-items: flex-end; }
+  .bottom > div {
+    height: 25px; }
 
 .team,
 .scorers {
@@ -141,10 +150,12 @@
 
   .scorers {
     order: 1; } }
-.right-col .score {
-  align-self: flex-end; }
-.right-col .top {
-  flex-flow: column wrap-reverse; }
+.right-col {
+  align-content: flex-start; }
+  .right-col .score {
+    align-self: flex-end; }
+  .right-col .top {
+    flex-flow: column wrap-reverse; }
 
 .left-col .top > *:not(.score),
 .left-col .bottom > * {
