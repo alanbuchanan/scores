@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
-  max-width: 800px;
+  max-width: 1040px;
   border: 1px solid seagreen;
   position: relative; }
 
@@ -35,9 +35,9 @@
 .main {
   display: flex;
   flex-flow: row;
-  min-width: 475px;
-  max-width: 600px;
-  border: 1px solid orangered; }
+  width: 900px;
+  border: 1px solid orangered;
+  margin-top: 41px; }
 
 .timer-wrap {
   display: flex;
@@ -45,12 +45,18 @@
   justify-content: center;
   width: 100%;
   border: 1px solid black; }
+  .timer-wrap .clock, .timer-wrap .status {
+    width: 92px; }
+  .timer-wrap .clock {
+    height: 32px; }
+  .timer-wrap .status {
+    height: 18px; }
   @media (max-width: 600px) {
     .timer-wrap {
-      flex-flow: column; } }
+      flex-flow: row; } }
   @media (min-width: 601px) {
     .timer-wrap {
-      flex-flow: row; } }
+      flex-flow: column; } }
 
 .clock {
   width: 70px;
@@ -67,8 +73,7 @@
 
 .scorers {
   background: steelblue;
-  overflow-x: scroll;
-  margin: auto; }
+  overflow-x: scroll; }
   .scorers ul {
     align-self: flex-start; }
 
@@ -78,7 +83,8 @@
 .carded-players {
   background: darkorange;
   display: flex;
-  flex: 1; }
+  flex: 1;
+  height: 38px; }
 
 @media (max-width: 600px) {
   .corner-a {
@@ -92,8 +98,7 @@
 .right-col {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  width: 80%; }
+  width: 100%; }
   .left-col * >,
   .right-col * > {
     display: flex; }
@@ -101,31 +106,44 @@
 .top {
   display: flex;
   flex-flow: column wrap;
-  height: 100px; }
+  align-content: flex-end;
+  height: 135px; }
 
 .bottom {
   display: flex;
   flex: 1;
-  align-items: flex-end; }
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-end; }
+  @media (min-width: 601px) {
+    .bottom {
+      width: 80%; } }
+
+.left-col .bottom {
+  align-self: flex-end; }
+
+.team {
+  height: 44%; }
 
 .team,
 .scorers {
   display: flex;
-  align-items: center;
-  height: 50%;
-  width: 75%; }
+  align-items: center; }
 
 .score {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  min-width: 56px;
-  height: 100%; }
+  width: 79px;
+  align-self: flex-end; }
   .score .number {
     background: brown;
     display: flex;
-    flex: 1; }
+    flex: 1;
+    height: 98px; }
+  .score .cards-desktop {
+    height: 37px; }
   .score .number, .score .cards-desktop {
     width: 100%; }
 
@@ -174,6 +192,9 @@
   justify-content: space-between;
   flex-flow: row;
   width: 100%; }
+
+.spacer {
+  width: 83px; }
 
 .corner-left,
 .corner-right,

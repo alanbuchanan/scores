@@ -38,7 +38,7 @@ $splitpoint: 600px;
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
-  max-width: 800px;
+  max-width: 1040px;
   border: 1px solid seagreen;
   position: relative;
 }
@@ -51,9 +51,10 @@ $splitpoint: 600px;
 .main {
   display: flex;
   flex-flow: row;
-  min-width: 475px;
-  max-width: $splitpoint;
+  width: 900px;
+  //max-width: $splitpoint;
   border: 1px solid orangered;
+  margin-top: 41px;
 }
 
 .timer-wrap {
@@ -63,12 +64,26 @@ $splitpoint: 600px;
   width: 100%;
   border: 1px solid black;
 
+  $clockwidth: 92px;
+
+  .clock, .status {
+    width: $clockwidth;
+  }
+
+  .clock {
+    height: 32px;
+  }
+
+  .status {
+    height: 18px;
+  }
+
   @include breakpoint(mobile) {
-    flex-flow: column;
+    flex-flow: row;
   }
 
   @include breakpoint(desktop) {
-    flex-flow: row;
+    flex-flow: column;
   }
 }
 
@@ -91,7 +106,6 @@ $splitpoint: 600px;
 .scorers {
   background: steelblue;
   overflow-x: scroll;
-  margin: auto;
 
   ul {
     align-self: flex-start;
@@ -106,6 +120,7 @@ $splitpoint: 600px;
   background: darkorange;
   display: flex;
   flex: 1;
+  height: 38px;
 }
 
 @include breakpoint(mobile) {
@@ -126,8 +141,7 @@ $splitpoint: 600px;
 .right-col {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  width: 80%;
+  width: 100%;
 
   * > {
     display: flex;
@@ -137,21 +151,33 @@ $splitpoint: 600px;
 .top {
   display: flex;
   flex-flow: column wrap;
-  height: 100px;
+  align-content: flex-end;
+  height: 135px;
 }
 
 .bottom {
   display: flex;
   flex: 1;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-end;
+  @include breakpoint(desktop) {
+    width: 80%;
+  }
+}
+
+.left-col .bottom {
+  align-self: flex-end;
+}
+
+.team {
+  height: 44%;
 }
 
 .team,
 .scorers {
   display: flex;
   align-items: center;
-  height: 50%;
-  width: 75%;
 }
 
 .score {
@@ -159,13 +185,18 @@ $splitpoint: 600px;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  min-width: 56px;
-  height: 100%;
+  width: 79px;
+  align-self: flex-end;
 
   .number {
     background: brown;
     display: flex;
     flex: 1;
+    height: 98px;
+  }
+
+  .cards-desktop {
+    height: 37px;
   }
 
   .number, .cards-desktop {
@@ -239,6 +270,10 @@ $splitpoint: 600px;
   justify-content: space-between;
   flex-flow: row;
   width: 100%;
+}
+
+.spacer {
+  width: 83px;
 }
 
 .corner-left,
