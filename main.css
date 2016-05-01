@@ -65,10 +65,6 @@
 .team {
   background: chartreuse; }
 
-.score {
-  background: brown;
-  height: 100px; }
-
 .scorers {
   background: steelblue;
   overflow-x: scroll;
@@ -77,8 +73,7 @@
     align-self: flex-start; }
 
 .cards-desktop {
-  background: goldenrod;
-  width: 55px; }
+  background: goldenrod; }
 
 .carded-players {
   background: darkorange;
@@ -107,8 +102,6 @@
   display: flex;
   flex-flow: column wrap;
   height: 100px; }
-  .top > div {
-    padding: 5px; }
 
 .bottom {
   display: flex;
@@ -124,11 +117,17 @@
 
 .score {
   display: flex;
-  flex: 0 0 100%;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   min-width: 56px;
-  font-size: 28px; }
+  height: 100%; }
+  .score .number {
+    background: brown;
+    display: flex;
+    flex: 1; }
+  .score .number, .score .cards-desktop {
+    width: 100%; }
 
 @media (max-width: 600px) {
   .main {
@@ -144,8 +143,7 @@
     width: 100%; }
 
   .score {
-    align-self: flex-end;
-    flex: 1 100px; }
+    align-self: flex-end; }
 
   .scorers {
     order: 1; } }

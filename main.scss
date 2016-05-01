@@ -88,15 +88,11 @@ $splitpoint: 600px;
   background: chartreuse;
 }
 
-.score {
-  background: brown;
-  height: 100px;
-}
-
 .scorers {
   background: steelblue;
   overflow-x: scroll;
   margin: auto;
+
   ul {
     align-self: flex-start;
   }
@@ -104,7 +100,6 @@ $splitpoint: 600px;
 
 .cards-desktop {
   background: goldenrod;
-  width: 55px;
 }
 
 .carded-players {
@@ -143,10 +138,6 @@ $splitpoint: 600px;
   display: flex;
   flex-flow: column wrap;
   height: 100px;
-
-  > div {
-    padding: 5px;
-  }
 }
 
 .bottom {
@@ -165,11 +156,21 @@ $splitpoint: 600px;
 
 .score {
   display: flex;
-  flex: 0 0 100%;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   min-width: 56px;
-  font-size: 28px;
+  height: 100%;
+
+  .number {
+    background: brown;
+    display: flex;
+    flex: 1;
+  }
+
+  .number, .cards-desktop {
+    width: 100%;
+  }
 }
 
 
@@ -191,7 +192,6 @@ $splitpoint: 600px;
 
   .score {
     align-self: flex-end;
-    flex: 1 100px;
   }
 
   .scorers {
